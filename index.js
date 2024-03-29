@@ -128,3 +128,70 @@ scrollElements.forEach((el) => observer.observe(el));
 
 AOS.init();
 
+
+document.getElementById('read-more-btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor tag behavior
+    var shortPara = document.querySelector('.short-para');
+    var fullPara = document.querySelector('.full-para');
+    
+    if (shortPara.style.display === 'none') {
+        shortPara.style.display = 'block';
+        fullPara.style.display = 'none';
+        this.textContent = 'Read More!';
+    } else {
+        shortPara.style.display = 'none';
+        fullPara.style.display = 'block';
+        this.textContent = 'Read Less';
+    }
+});
+
+function toggleDescription(event) {
+    event.preventDefault();
+    var shortDescription = document.querySelector('.short-description');
+    var fullDescription = document.querySelector('.full-description');
+
+    if (shortDescription.style.display === 'none') {
+        shortDescription.style.display = 'block';
+        fullDescription.style.display = 'none';
+        event.target.textContent = 'Read More';
+    } else {
+        shortDescription.style.display = 'none';
+        fullDescription.style.display = 'block';
+        event.target.textContent = 'Read Less';
+    }
+}
+
+function toggleDescription(event) {
+    event.preventDefault();
+    var shortDescription = document.querySelector('.short-description');
+    var fullDescription = document.querySelector('.full-description');
+    var btn = event.target;
+
+    if (shortDescription.style.display === 'none') {
+        shortDescription.style.display = 'block';
+        fullDescription.style.display = 'none';
+        btn.textContent = 'Read More';
+    } else {
+        shortDescription.style.display = 'none';
+        fullDescription.style.display = 'block';
+        btn.textContent = 'Read Less';
+    }
+}
+
+function toggleDescription(event) {
+    event.preventDefault();
+    var shortDescription = event.target.parentNode.previousElementSibling;
+    var fullDescription = shortDescription.nextElementSibling;
+    var btn = event.target;
+
+    if (shortDescription.style.display === 'none') {
+        shortDescription.style.display = 'block';
+        fullDescription.style.display = 'none';
+        btn.textContent = 'Read More';
+    } else {
+        shortDescription.style.display = 'none';
+        fullDescription.style.display = 'block';
+        btn.textContent = 'Read Less';
+    }
+}
+
