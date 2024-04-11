@@ -1068,3 +1068,132 @@ header.sticky {
 .change-text h3 {
   animation: fadeIn 1s ease forwards;
 }
+
+
+
+/* Media query for handling screen sizes up to 991px width */
+@media (max-width: 991px) {
+  header,
+  header.sticky {
+    padding: 15px 5%;
+  }
+  footer {
+    padding: 15px 5%;
+  }
+  section {
+    padding: 50px 5%;
+  }
+  .navlist a {
+    padding: 8px 15px;
+  }
+
+  :root {
+    --big-font: 2.5rem;
+    --norma-font: 2rem;
+    --neon-box-shadow: 0 0 0.5rem #12f7ff;
+    --h2-font: 3rem;
+  }
+
+  .home-content {
+    margin-top: 5rem;
+  }
+
+  .social-icons {
+    margin-top: 2rem;
+  }
+}
+
+/* Media query for handling screen sizes up to 768px width */
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+    transition: all 0.4s ease;
+  }
+  #menu-icon.bx-x {
+    transform: rotate(-180deg);
+  }
+
+  .navlist {
+    display: flex;
+    position: absolute;
+    top: -1000px;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    background: var(--bg-color);
+    text-align: left;
+    padding: 0 5%;
+    transition: all 0.45s ease;
+  }
+  .navlist a {
+    display: block;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .navlist.open {
+    top: 100%;
+  }
+  .home {
+    grid-template-columns: 1fr;
+  }
+  .home-image {
+    margin-bottom: 5rem;
+  }
+  .liquid-shape {
+    width: 80%;
+    left: 10%;
+    top: 13%;
+  }
+  .about {
+    flex-direction: column-reverse;
+  }
+  .skill-main {
+    grid-template-columns: 1fr;
+  }
+  .filter-buttons {
+    margin: 2.5rem 0;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Media query for handling screen sizes up to 420px width */
+@media (max-width: 420px) {
+  .html {
+    font-size: 80%;
+  }
+  footer p {
+    font-size: 0.6rem;
+  }
+
+  .filter-buttons .button {
+    font-size: 0.8rem;
+  }
+
+  .img-about img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+  }
+  .info-about1,
+  .info-about2,
+  .info-about3 {
+    display: none;
+  }
+
+  .img-about p {
+    font-size: 1rem;
+  }
+}
+
+/* Additional styles for header.sticky */
+header.sticky {
+  background: var(--bg-color);
+  border-bottom: 1px solid var(--secon--bg-color);
+  padding: 12px 10%;
+  animation: headerAnimation 0.5s ease forwards;
+}
+
+
